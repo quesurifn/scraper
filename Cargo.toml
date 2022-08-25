@@ -1,0 +1,40 @@
+[package]
+name = "dom-manipulator"
+version = "0.1.0"
+edition = "2022"
+
+description = "A library for HTML parsing, querying and serializing."
+keywords = ["html", "css", "selector", "scraping"]
+
+authors = [
+    "June McEnroe <june@causal.agency>",
+    "Kyle Fahey <kyle.c.r.fahey@gmail.com>"
+]
+license = "ISC"
+
+repository = "https://github.com/causal-agent/scraper"
+readme = "README.md"
+
+[dependencies]
+cssparser = "0.27"
+ego-tree = "0.6.2"
+html5ever = "0.26"
+matches = "0.1.9"
+selectors = "0.22.0"
+smallvec = "1.9.0"
+tendril = "0.4.3"
+indexmap = { version = "1.9.1", optional = true }
+
+[dependencies.getopts]
+version = "0.2.21"
+optional = true
+
+[features]
+default = ["main"]
+deterministic = ["indexmap"]
+main = ["getopts"]
+
+[[bin]]
+name = "dom-manipulator"
+path = "src/main.rs"
+required-features = ["main"]
