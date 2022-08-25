@@ -56,7 +56,7 @@ impl Html {
     ///
     /// ```
     /// # extern crate html5ever;
-    /// # extern crate scraper;
+    /// # extern crate dom_manipulator;
     /// # extern crate tendril;
     /// # fn main() {
     /// # let document = "";

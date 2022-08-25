@@ -1,8 +1,8 @@
 extern crate getopts;
-extern crate scraper;
+extern crate dom_manipulator;
 
 use getopts::Options;
-use scraper::{Html, Selector};
+use dom_manipulator::{Html, Selector};
 use std::env;
 use std::fs::{self, File};
 use std::io::{self, Read};

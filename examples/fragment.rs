@@ -1,8 +1,8 @@
-extern crate scraper;
+extern crate dom_manipulator;
 
 use std::io::{self, Read, Write};
 
-use scraper::{Html, Selector};
+use dom_manipulator::{Html, Selector};
 
 fn main() {
     let mut input = String::new();
